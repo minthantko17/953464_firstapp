@@ -57,6 +57,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             SizedBox(height: 20),
             Image.asset("images/food.png", width: 150, height: 150),
+            Image.network(
+              "https://media.tenor.com/7t63GFnoIPUAAAAd/huh-cat-huh-m4rtin.gif",
+              width: 50,
+              height: 100,
+            ),
             priceTextField(),
             amountTextField(),
             calculateButton(),
