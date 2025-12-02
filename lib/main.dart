@@ -55,6 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundColor: Colors.red,
               ),
             ),
+            SizedBox(height: 20),
+            Image.asset("images/food.png", width: 150, height: 150),
             priceTextField(),
             amountTextField(),
             calculateButton(),
