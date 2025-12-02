@@ -1,3 +1,7 @@
+## Min Thant Ko (662115510)
+
+Output Screenshots are added in outputScreenshot folder.
+
 # firstapp
 
 A new Flutter project.
