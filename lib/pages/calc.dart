@@ -17,44 +17,34 @@ class _CalculatePageState extends State<CalculatePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Calculate Change"),
-      ),
-      // body: Center(child: Column(children: [Text("Hello")])),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView(
-          children: [
-            Text(
-              "Calculate Change",
-              style: TextStyle(
-                fontFamily: "maa",
-                fontSize: 32,
-                fontWeight: FontWeight.w700,
-                fontStyle: FontStyle.italic,
-                color: Colors.blueAccent,
-                backgroundColor: Colors.red,
-              ),
-            ),
-            SizedBox(height: 20),
-            Image.asset("images/food.png", width: 150, height: 150),
-            Image.network(
-              "https://media.tenor.com/7t63GFnoIPUAAAAd/huh-cat-huh-m4rtin.gif",
-              width: 50,
-              height: 100,
-            ),
-            priceTextField(),
-            amountTextField(),
-            calculateButton(),
-            showTotalText(),
-            receiveMoneyTextField(),
-            changeCalculateButton(),
-            showChangeText(),
-          ],
+    return ListView(
+      children: [
+        Text(
+          "Calculate Change",
+          style: TextStyle(
+            fontFamily: "maa",
+            fontSize: 32,
+            fontWeight: FontWeight.w700,
+            fontStyle: FontStyle.italic,
+            color: Colors.blueAccent,
+            backgroundColor: Colors.red,
+          ),
         ),
-      ),
+        SizedBox(height: 20),
+        Image.asset("images/food.png", width: 150, height: 150),
+        Image.network(
+          "https://media.tenor.com/7t63GFnoIPUAAAAd/huh-cat-huh-m4rtin.gif",
+          width: 50,
+          height: 100,
+        ),
+        priceTextField(),
+        amountTextField(),
+        calculateButton(),
+        showTotalText(),
+        receiveMoneyTextField(),
+        changeCalculateButton(),
+        showChangeText(),
+      ],
     );
   }
 
