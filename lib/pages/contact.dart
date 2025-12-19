@@ -8,39 +8,17 @@ class ContactPage extends StatefulWidget {
 }
 
 class _ContactPageState extends State<ContactPage> {
-  List mydata = ['Apple', 'Banana', 'Papaya'];
+  final items = List<String>.generate(1000, (i) => "Item $i");
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Center(
-          child: Column(
-            children: [
-              ListTile(
-                onTap: () {},
-                leading: Icon(Icons.abc_sharp),
-                title: Text(mydata[0]),
-                subtitle: Text("subtitle"),
-                trailing: FlutterLogo(),
-              ),
-              ListTile(
-                onTap: () {},
-                leading: Icon(Icons.abc_sharp),
-                title: Text(mydata[1]),
-                subtitle: Text("subtitle"),
-                trailing: FlutterLogo(),
-              ),
-              ListTile(
-                onTap: () {},
-                leading: Icon(Icons.abc_sharp),
-                title: Text(mydata[2]),
-                subtitle: Text("subtitle"),
-                trailing: FlutterLogo(),
-              ),
-            ],
-          ),
-        ),
-      ],
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return ListTile(
+          onTap: () {},
+          leading: Icon(Icons.heart_broken),
+          title: Text(items[index]),
+        );
+      },
     );
   }
 }
