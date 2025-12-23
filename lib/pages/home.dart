@@ -1,3 +1,4 @@
+import 'package:firstapp/pages/detail.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,6 +33,16 @@ class _HomePageState extends State<HomePage> {
             "https://1.bp.blogspot.com/-nofCTi1SfwQ/VXGc5Z0bFBI/AAAAAAAAAx8/5MJO9dAS82s/s1600/dart%2Blogo.png",
           ),
           SizedBox(height: 24),
+          TextButton(
+            onPressed: () {
+              print("next page >>");
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const DetailPage()),
+              );
+            },
+            child: Text("Detail page"),
+          ),
         ],
       ),
     );
