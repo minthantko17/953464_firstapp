@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:firstapp/pages/detail.dart';
 import 'package:flutter/material.dart';
 
@@ -13,33 +15,28 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(20),
-      child: ListView(
-        children: [
-          myBox(
-            "What is a computer",
-            "Computer is a thing to calculate and do any other words.",
-            "https://th.bing.com/th/id/R.c9c905906ed5f6b395dec5514f75b7cb?rik=cI0aaM39DTF6dA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fHd-Laptop-wallpapers.jpg&ehk=fdAGF7dNdtQMtY9E7s8hArE8z60Wx9Vbg4oAC9aYUcs%3d&risl=&pid=ImgRaw&r=0",
-          ),
-          SizedBox(height: 24),
-          myBox(
-            "What is Flutter",
-            "Flutter is a framework to develop mobile applications.",
-            "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/300793461/original/0bec4e17182a7b93302af481d2f447d752187b90/create-your-application-with-dart-and-flutter.jpeg",
-          ),
-          SizedBox(height: 24),
-          myBox(
-            "What is Dart Language",
-            "Dart is a programming language.",
-            "https://1.bp.blogspot.com/-nofCTi1SfwQ/VXGc5Z0bFBI/AAAAAAAAAx8/5MJO9dAS82s/s1600/dart%2Blogo.png",
-          ),
-          SizedBox(height: 24),
-        ],
+      child: FutureBuilder(
+        builder: (context, snapshot) {
+          List<dynamic> data = json.decode(snapshot.data.toString());
+          return ListView.builder(
+            itemCount: data.length,
+            itemBuilder: (BuildContext context, int index) {
+              return myBox(
+                data[index]['title'],
+                data[index]['subtitle'],
+                data[index]['image_url'],
+              );
+            },
+          );
+        },
+        future: DefaultAssetBundle.of(context).loadString('assets/data.json'),
       ),
     );
   }
 
   Widget myBox(String title, String subtitle, String imageUrl) {
     return Container(
+      margin: EdgeInsets.only(top: 20),
       padding: EdgeInsets.all(24),
       height: 185,
       decoration: BoxDecoration(
