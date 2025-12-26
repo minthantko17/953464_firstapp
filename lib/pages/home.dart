@@ -29,20 +29,10 @@ class _HomePageState extends State<HomePage> {
           SizedBox(height: 24),
           myBox(
             "What is Dart Language",
-            "Dart is a programming language to develop Flutter applications.",
+            "Dart is a programming language.",
             "https://1.bp.blogspot.com/-nofCTi1SfwQ/VXGc5Z0bFBI/AAAAAAAAAx8/5MJO9dAS82s/s1600/dart%2Blogo.png",
           ),
           SizedBox(height: 24),
-          TextButton(
-            onPressed: () {
-              print("next page >>");
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const DetailPage()),
-              );
-            },
-            child: Text("Detail page"),
-          ),
         ],
       ),
     );
@@ -51,7 +41,7 @@ class _HomePageState extends State<HomePage> {
   Widget myBox(String title, String subtitle, String imageUrl) {
     return Container(
       padding: EdgeInsets.all(24),
-      height: 150,
+      height: 185,
       decoration: BoxDecoration(
         color: Colors.blue[200],
         borderRadius: BorderRadius.circular(20),
@@ -70,6 +60,16 @@ class _HomePageState extends State<HomePage> {
         children: [
           Text(title, style: TextStyle(fontSize: 25, color: Colors.white)),
           Text(subtitle, style: TextStyle(fontSize: 15, color: Colors.white)),
+          TextButton(
+            onPressed: () {
+              print("next page >>");
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const DetailPage()),
+              );
+            },
+            child: Text("Detail page", style: TextStyle(color: Colors.white)),
+          ),
         ],
       ),
     );
