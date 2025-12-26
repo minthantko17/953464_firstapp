@@ -3,18 +3,18 @@
         "title" : "What is a computer",
         "subtitle": "Computer is a thing to calculate and do any other words.",
         "image_url": "https://th.bing.com/th/id/R.c9c905906ed5f6b395dec5514f75b7cb?rik=cI0aaM39DTF6dA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fHd-Laptop-wallpapers.jpg&ehk=fdAGF7dNdtQMtY9E7s8hArE8z60Wx9Vbg4oAC9aYUcs%3d&risl=&pid=ImgRaw&r=0",
-        "detail": "This is detail of computer."
+        "detail": "Computer is an electronic device that manipulates information or data. It has the ability to store, retrieve, and process data. You can use a computer to type documents, send email, play games, browse the web, and more."
     },
     {
         "title" : "What is Flutter",
         "subtitle": "Flutter is a framework to develop mobile applications.",
         "image_url": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/300793461/original/0bec4e17182a7b93302af481d2f447d752187b90/create-your-application-with-dart-and-flutter.jpeg",
-        "detail": "This is detail of Flutter."
+        "detail": "Flutter is an open-source UI software development toolkit created by Google. It is used to develop cross platform applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase."
     },
     {
         "title" : "What is Dart",
         "subtitle": "Dart is a programming language.",
         "image_url": "https://1.bp.blogspot.com/-nofCTi1SfwQ/VXGc5Z0bFBI/AAAAAAAAAx8/5MJO9dAS82s/s1600/dart%2Blogo.png",
-        "detail": "This is detail of dart."
+        "detail": "Dart is a client-optimized programming language for apps on multiple platforms. It is developed by Google and is used to build mobile, desktop, server, and web applications. Dart is an object-oriented, class-based, garbage-collected language with C-style syntax."
     }
 ]

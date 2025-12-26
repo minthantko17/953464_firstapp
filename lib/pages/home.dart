@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
                 data[index]['title'],
                 data[index]['subtitle'],
                 data[index]['image_url'],
+                data[index]['detail'],
               );
             },
           );
@@ -34,7 +35,13 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget myBox(String title, String subtitle, String imageUrl) {
+  Widget myBox(String title, String subtitle, String imageUrl, String detail) {
+    var v1, v2, v3, v4;
+    v1 = title;
+    v2 = subtitle;
+    v3 = imageUrl;
+    v4 = detail;
+
     return Container(
       margin: EdgeInsets.only(top: 20),
       padding: EdgeInsets.all(24),
@@ -62,7 +69,9 @@ class _HomePageState extends State<HomePage> {
               print("next page >>");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const DetailPage()),
+                MaterialPageRoute(
+                  builder: (context) => DetailPage(v1, v2, v3, v4),
+                ),
               );
             },
             child: Text("Detail page", style: TextStyle(color: Colors.white)),
